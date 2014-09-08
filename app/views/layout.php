@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" ng-app> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="todo-app"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,8 @@
 
         <!-- Add your site or application content here -->
         <div class="container">
-          <div class="row" ng-controller="TodosController">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="row" ng-controller="TodoCtrl">
             <div class="page-header">
               <h2>
                 Todos
@@ -48,11 +49,12 @@
             </form>
           </div>
         </div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
-        <script src="/js/main.js"></script>
+        <script src="/js/app.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
