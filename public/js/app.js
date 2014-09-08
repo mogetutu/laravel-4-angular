@@ -1,4 +1,6 @@
-function TodosController($scope, $http) {
+"use strict";
+angular.module('todo-app', [])
+.controller('TodoCtrl', ['$scope', '$http', function ($scope,$http) {
 
   $http.get('/todos').success(function(todos) {
     $scope.todos = todos;
@@ -19,10 +21,10 @@ function TodosController($scope, $http) {
       title: $scope.newTodoText,
       completed: false
     };
+
     $scope.todos.push(todo);
     $http.post('/todos', todo);
-    // Clear text field
-    $scope.newTodoText = null;
+    $scope.newTodoText = null; // Clear text field
   };
 
   $scope.completeTodo = function (todo) {
@@ -37,4 +39,4 @@ function TodosController($scope, $http) {
     $scope.todos.pop(todo);
     $http.delete('/todos/' + todo.id);
   };
-}
+}]);
